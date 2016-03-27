@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "EMSDK.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    EMOptions *options = [EMOptions optionsWithAppkey:@"hehemmm#hxcs"];
+    
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
+    //
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    loginVC.title = @"登录";
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBarTintColor:[UIColor blueColor]];
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -28,10 +48,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

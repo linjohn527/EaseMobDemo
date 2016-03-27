@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F3CA8D1CA7A71400D3F676 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */; };
+		17F3CA8E1CA7A71400D3F676 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */; };
+		17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */; };
 		17F558BD1CA6B0C9000AAD18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558BC1CA6B0C9000AAD18 /* main.m */; };
-		17F558C01CA6B0C9000AAD18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558BF1CA6B0C9000AAD18 /* AppDelegate.m */; };
 		17F558C31CA6B0C9000AAD18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558C21CA6B0C9000AAD18 /* ViewController.m */; };
 		17F558C61CA6B0C9000AAD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F558C41CA6B0C9000AAD18 /* Main.storyboard */; };
 		17F558C81CA6B0C9000AAD18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F558C71CA6B0C9000AAD18 /* Assets.xcassets */; };
@@ -28,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17F3CA8A1CA7A71400D3F676 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		17F3CA8F1CA7AB9200D3F676 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		17F558B81CA6B0C9000AAD18 /* EaseMobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseMobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F558BC1CA6B0C9000AAD18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17F558BE1CA6B0C9000AAD18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,6 +122,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17F3CA841CA7A60500D3F676 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				17F3CA891CA7A65900D3F676 /* Xibs */,
+				17F3CA881CA7A64500D3F676 /* Category */,
+				17F3CA871CA7A63C00D3F676 /* Others */,
+				17F3CA861CA7A63600D3F676 /* Views */,
+				17F3CA851CA7A62600D3F676 /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		17F3CA851CA7A62600D3F676 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17F3CA8A1CA7A71400D3F676 /* LoginViewController.h */,
+				17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */,
+				17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */,
+				17F3CA8F1CA7AB9200D3F676 /* MainTabBarController.h */,
+				17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		17F3CA861CA7A63600D3F676 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		17F3CA871CA7A63C00D3F676 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				17F558BE1CA6B0C9000AAD18 /* AppDelegate.h */,
+				17F558BF1CA6B0C9000AAD18 /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		17F3CA881CA7A64500D3F676 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		17F3CA891CA7A65900D3F676 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				17F558C41CA6B0C9000AAD18 /* Main.storyboard */,
+				17F558C91CA6B0C9000AAD18 /* LaunchScreen.storyboard */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
 		17F558AF1CA6B0C9000AAD18 = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				17F558FF1CA6B35D000AAD18 /* HyphenateSDK */,
-				17F558BE1CA6B0C9000AAD18 /* AppDelegate.h */,
-				17F558BF1CA6B0C9000AAD18 /* AppDelegate.m */,
+				17F3CA841CA7A60500D3F676 /* Classes */,
 				17F558C11CA6B0C9000AAD18 /* ViewController.h */,
 				17F558C21CA6B0C9000AAD18 /* ViewController.m */,
-				17F558C41CA6B0C9000AAD18 /* Main.storyboard */,
 				17F558C71CA6B0C9000AAD18 /* Assets.xcassets */,
-				17F558C91CA6B0C9000AAD18 /* LaunchScreen.storyboard */,
 				17F558CC1CA6B0C9000AAD18 /* Info.plist */,
 				17F558BB1CA6B0C9000AAD18 /* Supporting Files */,
 			);
@@ -296,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F3CA8E1CA7A71400D3F676 /* LoginViewController.xib in Resources */,
 				17F558CB1CA6B0C9000AAD18 /* LaunchScreen.storyboard in Resources */,
 				17F558C81CA6B0C9000AAD18 /* Assets.xcassets in Resources */,
 				17F558C61CA6B0C9000AAD18 /* Main.storyboard in Resources */,
@@ -309,8 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F3CA8D1CA7A71400D3F676 /* LoginViewController.m in Sources */,
 				17F558C31CA6B0C9000AAD18 /* ViewController.m in Sources */,
-				17F558C01CA6B0C9000AAD18 /* AppDelegate.m in Sources */,
+				17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */,
 				17F558BD1CA6B0C9000AAD18 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +530,7 @@
 				17F558D11CA6B0C9000AAD18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
