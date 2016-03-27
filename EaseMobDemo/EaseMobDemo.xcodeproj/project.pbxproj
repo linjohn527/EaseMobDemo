@@ -10,6 +10,10 @@
 		17F3CA8D1CA7A71400D3F676 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */; };
 		17F3CA8E1CA7A71400D3F676 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */; };
 		17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */; };
+		17F3CA941CA7B27600D3F676 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA931CA7B27600D3F676 /* ConversationViewController.m */; };
+		17F3CA971CA7B28900D3F676 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA961CA7B28900D3F676 /* AddressBookViewController.m */; };
+		17F3CA9A1CA7B29500D3F676 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA991CA7B29500D3F676 /* SettingViewController.m */; };
+		17F3CA9B1CA7B57B00D3F676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558BF1CA6B0C9000AAD18 /* AppDelegate.m */; };
 		17F558BD1CA6B0C9000AAD18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558BC1CA6B0C9000AAD18 /* main.m */; };
 		17F558C31CA6B0C9000AAD18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F558C21CA6B0C9000AAD18 /* ViewController.m */; };
 		17F558C61CA6B0C9000AAD18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F558C41CA6B0C9000AAD18 /* Main.storyboard */; };
@@ -35,6 +39,12 @@
 		17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		17F3CA8F1CA7AB9200D3F676 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		17F3CA921CA7B27600D3F676 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		17F3CA931CA7B27600D3F676 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		17F3CA951CA7B28900D3F676 /* AddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
+		17F3CA961CA7B28900D3F676 /* AddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
+		17F3CA981CA7B29500D3F676 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		17F3CA991CA7B29500D3F676 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		17F558B81CA6B0C9000AAD18 /* EaseMobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EaseMobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F558BC1CA6B0C9000AAD18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17F558BE1CA6B0C9000AAD18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +152,12 @@
 				17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */,
 				17F3CA8F1CA7AB9200D3F676 /* MainTabBarController.h */,
 				17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */,
+				17F3CA921CA7B27600D3F676 /* ConversationViewController.h */,
+				17F3CA931CA7B27600D3F676 /* ConversationViewController.m */,
+				17F3CA951CA7B28900D3F676 /* AddressBookViewController.h */,
+				17F3CA961CA7B28900D3F676 /* AddressBookViewController.m */,
+				17F3CA981CA7B29500D3F676 /* SettingViewController.h */,
+				17F3CA991CA7B29500D3F676 /* SettingViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -370,10 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F3CA9B1CA7B57B00D3F676 /* AppDelegate.m in Sources */,
 				17F3CA8D1CA7A71400D3F676 /* LoginViewController.m in Sources */,
 				17F558C31CA6B0C9000AAD18 /* ViewController.m in Sources */,
+				17F3CA971CA7B28900D3F676 /* AddressBookViewController.m in Sources */,
+				17F3CA9A1CA7B29500D3F676 /* SettingViewController.m in Sources */,
 				17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */,
 				17F558BD1CA6B0C9000AAD18 /* main.m in Sources */,
+				17F3CA941CA7B27600D3F676 /* ConversationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +510,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EaseMobDemo/HyphenateSDK/lib",
 				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/EaseMobDemo/HyphenateSDK/lib/libHyphenateSDK.a\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = linjohn.com.EaseMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -505,6 +529,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EaseMobDemo/HyphenateSDK/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/EaseMobDemo/HyphenateSDK/lib/libHyphenateSDK.a\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = linjohn.com.EaseMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
