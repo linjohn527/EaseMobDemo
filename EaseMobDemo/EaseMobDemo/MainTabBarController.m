@@ -33,7 +33,7 @@
     [self addChildViewController:addVC title:@"通讯录" image:@"tabbar_contacts" highligtImg:@"tabbar_contactsHL"];
     
     //
-    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    SettingViewController *settingVC = [[SettingViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
     [self addChildViewController:settingVC title:@"设置" image:@"tabbar_setting" highligtImg:@"tabbar_settingHL"];
 }

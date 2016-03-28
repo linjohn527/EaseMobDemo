@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170448921CA916D800CD3388 /* AddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170448901CA916D800CD3388 /* AddFriendViewController.m */; };
+		170448931CA916D800CD3388 /* AddFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170448911CA916D800CD3388 /* AddFriendViewController.xib */; };
 		17F3CA8D1CA7A71400D3F676 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */; };
 		17F3CA8E1CA7A71400D3F676 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */; };
 		17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F3CA901CA7AB9200D3F676 /* MainTabBarController.m */; };
@@ -34,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1704488F1CA916D800CD3388 /* AddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendViewController.h; sourceTree = "<group>"; };
+		170448901CA916D800CD3388 /* AddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendViewController.m; sourceTree = "<group>"; };
+		170448911CA916D800CD3388 /* AddFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddFriendViewController.xib; sourceTree = "<group>"; };
 		17F3CA8A1CA7A71400D3F676 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		17F3CA8B1CA7A71400D3F676 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		17F3CA8C1CA7A71400D3F676 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -158,6 +163,9 @@
 				17F3CA961CA7B28900D3F676 /* AddressBookViewController.m */,
 				17F3CA981CA7B29500D3F676 /* SettingViewController.h */,
 				17F3CA991CA7B29500D3F676 /* SettingViewController.m */,
+				1704488F1CA916D800CD3388 /* AddFriendViewController.h */,
+				170448901CA916D800CD3388 /* AddFriendViewController.m */,
+				170448911CA916D800CD3388 /* AddFriendViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				17F558CB1CA6B0C9000AAD18 /* LaunchScreen.storyboard in Resources */,
 				17F558C81CA6B0C9000AAD18 /* Assets.xcassets in Resources */,
 				17F558C61CA6B0C9000AAD18 /* Main.storyboard in Resources */,
+				170448931CA916D800CD3388 /* AddFriendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +402,7 @@
 				17F3CA9A1CA7B29500D3F676 /* SettingViewController.m in Sources */,
 				17F3CA911CA7AB9200D3F676 /* MainTabBarController.m in Sources */,
 				17F558BD1CA6B0C9000AAD18 /* main.m in Sources */,
+				170448921CA916D800CD3388 /* AddFriendViewController.m in Sources */,
 				17F3CA941CA7B27600D3F676 /* ConversationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

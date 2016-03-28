@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddressBookViewController : UIViewController
+@interface AddressBookViewController : UITableViewController
 
 @end

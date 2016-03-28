@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "EMSDK.h"
 #import "LoginViewController.h"
+#import "MainTabBarController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<EMClientDelegate>
 
 @end
 
@@ -20,10 +21,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+   
+    
     EMOptions *options = [EMOptions optionsWithAppkey:@"hehemmm#hxcs"];
     
     [[EMClient sharedClient] initializeSDKWithOptions:options];
     
+    
+    //
+    //添加代理监听
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
+    
+    //先跳转到登录界面
+    [self switchToLoginVC];
+    
+     [self.window makeKeyAndVisible];
+
+    return YES;
+}
+
+/**
+ *  跳转到登录控制器
+ */
+- (void)switchToLoginVC {
+
     //
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     loginVC.title = @"登录";
@@ -32,12 +56,37 @@
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBarTintColor:[UIColor blueColor]];
     
-    self.window = [[UIWindow alloc] init];
-    self.window.frame = [UIScreen mainScreen].bounds;
     self.window.rootViewController = nav;
-    [self.window makeKeyAndVisible];
     
-    return YES;
+}
+
+/**
+ *  跳转主界面
+ */
+- (void)switchToMainTabBarVC {
+    
+    //跳转主界面
+    MainTabBarController *mainTabBar = [[MainTabBarController alloc] init];
+    
+    self.window.rootViewController = mainTabBar;
+
+    [self.window makeKeyAndVisible];
+}
+
+
+#pragma mark - <EMClientDelegate>
+- (void)didAutoLoginWithError:(EMError *)aError {
+  
+    if (!aError) {//自动登录没有错误
+        
+        [self switchToMainTabBarVC];
+        
+        
+    } else {
+        
+        NSLog(@"%@",aError);
+        
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
