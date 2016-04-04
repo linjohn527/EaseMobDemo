@@ -1,0 +1,11 @@
+//
+//  PrefixHeader.pch
+//  EaseMobDemo
+//
+//  Created by linjohn on 3/29/16.
+//  Copyright © 2016 linjohn. All rights reserved.
+//
+
+#define NSEaseLocalizedString(key, comment) [[NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"EaseUIResource" withExtension:@"bundle"]] localizedStringForKey:(key) value:@"" table:nil]
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width

@@ -22,9 +22,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //
-    [[EMClient sharedClient] addDelegate:self delegateQueue:dispatch_get_global_queue(0, 0)];
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
     
-    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:dispatch_get_global_queue(0, 0)];
+    [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     
   
 }

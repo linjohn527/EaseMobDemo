@@ -10,6 +10,7 @@
 #import "ConversationViewController.h"
 #import "AddressBookViewController.h"
 #import "SettingViewController.h"
+#import "MainNavController.h"
 
 @interface MainTabBarController ()
 
@@ -61,7 +62,7 @@
     
     
     //
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    MainNavController *nav = [[MainNavController alloc] initWithRootViewController:vc];
     
     [self addChildViewController:nav];
 }

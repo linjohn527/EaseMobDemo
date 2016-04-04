@@ -9,6 +9,7 @@
 #import "AddressBookViewController.h"
 #import "AddFriendViewController.h"
 #import "EMSDK.h"
+#import "ChatViewController.h"
 
 @interface AddressBookViewController ()<EMContactManagerDelegate>
 
@@ -100,6 +101,13 @@
     return YES;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    ChatViewController *chatVC = [[UIStoryboard storyboardWithName:@"ChatView" bundle:nil] instantiateInitialViewController];
+    chatVC.username = self.buddyList[indexPath.row];
+    [self.navigationController pushViewController:chatVC animated:YES];
+}
+
 #pragma mark - <EMContactManagerDelegate>
 -(void)didReceiveAgreedFromUsername:(NSString *)aUsername {
     
@@ -132,27 +140,27 @@
  *  从服务器异步获取最新的好友列表信息
  */
 - (void)asyncFetchBuddyListFromServer {
-
-    if (self.buddyList.count) {
-        
-        __weak typeof(self) weakSelf = self;
-        __block EMError *error = nil;
-        
+  
+    
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
-            weakSelf.buddyList = [[EMClient sharedClient].contactManager getContactsFromServerWithError:&error];//该请求方法会堵塞当前线程
-            
+            EMError *error = nil;
+            NSArray *latestBuddyList = [[EMClient sharedClient].contactManager getContactsFromServerWithError:&error];//该请求方法会堵塞当前线程
+    
             if (!error) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^{//在主线程更新UI
                     
-                    [weakSelf.tableView reloadData];
+                    if (self.buddyList.count != latestBuddyList.count) {//更新最新的数据
+                        self.buddyList = latestBuddyList;
+                        [self.tableView reloadData];
+                    }
+                   
                     
                 });
             }
         });
-        
-    }
+    
 }
 
 
